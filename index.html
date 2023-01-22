@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+
+  <!-- Sidebar start -->
+
+  <main class="container">
+    <div class="side-bar">
+      <div >
+        <ul class="tab-status">
+          <li class="tab active">Step 1<a href="#">your info</a></li>
+          <li class="tab">Step 2<a href="#">select plan</a></li>
+          <li class="tab">Step 3<a href="#">add-ons</a></li>
+          <li class="tab">Step 4<a href="#">summary</a></li>
+        </ul>
+      </div>
+ <!-- Sidebar end -->
+
+    </div>
+ <!-- Step 1 start -->
+ <div class="content">
+ <form class="form" action="#" >
+  <div role="tab-list">
+<div class="tabpanel" id="personal-info">
+<div class="form-header">
+ <h2>personal info</h2>
+  <p>Please provide your name, email address, and phone number.</p>
+  </div>
+ <div class="form-body">
+<div class="form-input">
+  <label for="name">Name</label>
+  <input type="text" name="name" placeholder="e.g. Stephen King" required="required">
+</div>
+<div class="form-input">
+  <label for="email">Email Address</label>
+  <input type="email" name="email" placeholder="stephenking@lorem.com" required="required" >
+</div>
+<div class="form-input">
+  <label for="phone">Phone Number</label>
+  <input type="email" name="phone" placeholder="e.g. +1 234 567 890" required="required">
+</div>
+
+ </div>
+</div>
+  <div class="tabpanel hidden" id="your-plan">
+  <div class="form-header">
+ <h2> Select your plan</h2>
+  <p>You have the option of monthly or yearly billing.</p>
+  </div>
+ <div class="form-body">
+  <div class="options">
+    <div class="plan-card">
+      <img src="/assets/images/icon-arcade.svg" alt="">
+      <div class="plan">
+        <h5>Arcade</h5>
+      <p>$9/mo</p>
+      </div>
+      
+    </div>
+    <div class="plan-card">
+
+      <img src="/assets/images/icon-advanced.svg" alt="advanced card">
+      <div class="plan">
+        <h5>Advanced</h5>
+      <p>$12/mo</p>
+      </div>
+    </div>
+    <div class="plan-card">
+
+      <img src="/assets/images/icon-pro.svg" alt="advanced card">
+      <div class="plan">
+        <h5>Pro</h5>
+      <p>$15/mo</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="select-plan">
+    <p class="selected">Monthly</p>
+    <label class="toggle-bg">
+      <input type="checkbox" name="" id="">
+    <span class="slider round"></span>
+    </label>
+    <p>Yearly</p>
+  </div>
+ </div> 
+  </div>
+  <div class="tabpanel hidden" id="pick-adons">
+
+  <!-- Step 3 end -->
+  <div class="form-header">
+ <h2>  Pick add-ons</h2>
+  <p> Add-ons help enhance your gaming experience.</p>
+  </div>
+ <div class="form-body">
+  <div class="addon-options">
+    <div class="plan-card">
+       <input type="checkbox" name="" id="">
+      <div class="addon">
+        <h5>Online service</h5>
+      <p>Access to multiplayer game</p>
+      </div>
+      <p>+$1/mo</p>
+    </div>
+    <div class="plan-card">
+      <input type="checkbox" name="" id="">
+      <div class="addon">
+        <h5>Lager storage</h5>
+      <p>Extra 1TB of cloud save</p>
+      </div>
+      <p>+$1/mo</p>
+    </div>
+    <div class="plan-card">
+      <input type="checkbox" name="" id="">
+      <div class="addon">
+        <h5>Customizable profile</h5>
+      <p>Custom theme on your profile</p>
+      </div>
+      <p>+$1/mo</p>
+    </div>
+
+  </div>
+ </div>
+
+
+  </div>
+  <div class="tabpanel hidden" id="finishing-up">
+
+  <!-- Step 3 end -->
+  <div class="form-header">
+ <h2>Finishing up</h2>
+  <p>Double-check everything looks OK before confirming</p>
+  </div>
+ <div class="form-body">
+  <div class="finish-options">
+    <div class="plan-card">
+      <div class="addon">
+        <h5>Online service</h5>
+              <p>+$1/mo</p>
+      </div>
+      <hr>
+      <div class="addon">
+        <h5>Online service</h5>
+              <p>+$1/mo</p>
+      </div>
+      &nbsp
+      <div class="addon">
+        <h5>Online service</h5>
+              <p>+$1/mo</p>
+      </div>
+    </div>
+    <div class="total">
+        <h5>Total(per Month)</h5>
+              <p>+$12/mo</p>
+      </div>
+      <input type="checkbox" name="" hidden id="">
+    </div>
+ </div>
+
+
+  </div>
+  </div>
+  <div class="pagination">
+        <a class="hidden" id="prev">Go back</a>
+        <a class="btn" id="next">Next step</a>
+        <button class="btn btn-submit hidden" id="submit">Submit</button>
+      </div>
+</form>
+
+ </div>
+    
+  
+
+
+ 
+
+    <!-- Step 1 end -->
+
+
+  </main>
+ 
+ 
+
+ 
+
+ <script>
+
+const previousButton = document.querySelector('#prev')
+const nextButton = document.querySelector('#next')
+const submitButton = document.querySelector('#submit')
+const tabTargets = document.querySelectorAll('.tab')
+const tabPanels = document.querySelectorAll('.tabpanel')
+const isEmpty = (str) => !str.trim().length
+let currentStep = 0
+
+// Validate first input on load
+validateEntry()
+
+// Next: Change UI relative to current step and account for button permissions
+nextButton.addEventListener('click', (event) => {
+  event.preventDefault()
+
+  // Hide current tab
+  tabPanels[currentStep].classList.add('hidden')
+  tabTargets[currentStep].classList.remove('active')
+
+  // Show next tab
+  tabPanels[currentStep + 1].classList.remove('hidden')
+  tabTargets[currentStep + 1].classList.add('active')
+  currentStep += 1
+  
+  validateEntry()
+  updateStatusDisplay()
+})
+
+// Previous: Change UI relative to current step and account for button permissions
+previousButton.addEventListener('click', (event) => {
+  event.preventDefault()
+
+  // Hide current tab
+  tabPanels[currentStep].classList.add('hidden')
+  tabTargets[currentStep].classList.remove('active')
+
+  // Show previous tab
+  tabPanels[currentStep - 1].classList.remove('hidden')
+  tabTargets[currentStep - 1].classList.add('active')
+  currentStep -= 1
+
+  nextButton.removeAttribute('disabled')
+  updateStatusDisplay()
+})
+
+
+function updateStatusDisplay() {
+  // If on the last step, hide the next button and show submit
+  if (currentStep === tabTargets.length - 1) {
+    nextButton.classList.add('hidden')
+    previousButton.classList.remove('hidden')
+    submitButton.classList.remove('hidden')
+    validateEntry()
+
+    // If it's the first step hide the previous button
+  } else if (currentStep == 0) {
+    nextButton.classList.remove('hidden')
+    previousButton.classList.add('hidden')
+    submitButton.classList.add('hidden')
+    // In all other instances display both buttons
+  } else {
+    nextButton.classList.remove('hidden')
+    previousButton.classList.remove('hidden')
+    submitButton.classList.add('hidden')
+  }
+}
+
+function validateEntry() {
+  let input = tabPanels[currentStep].querySelector('input')
+  
+  // Start but disabling continue button
+  nextButton.setAttribute('disabled', true)
+  submitButton.setAttribute('disabled', true)
+  
+  // Validate on initial function fire
+  setButtonPermissions(input)
+  
+  // Validate on input
+  input.addEventListener('input', () => setButtonPermissions(input))
+  // Validate if bluring from input
+  input.addEventListener('blur', () => setButtonPermissions(input))
+}
+
+function setButtonPermissions(input) {
+  if (isEmpty(input.value)) {
+    nextButton.setAttribute('disabled', true)
+    submitButton.setAttribute('disabled', true)
+  } else {
+    nextButton.removeAttribute('disabled')
+    submitButton.removeAttribute('disabled')
+  }
+}
+ </script>
+
+
+</body>
+</html>
