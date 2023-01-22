@@ -1,0 +1,459 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: hsl(206, 94%, 87%);
+    display: flex;
+    justify-content: center;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    background: hsl(0, 0%, 100%) ;
+    padding:  2px 10px;
+    border-radius: 10px;
+
+}
+.side-bar{
+    flex-basis: 30%;
+    background: url(images/bg-sidebar-desktop.svg);
+    min-height: 70vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+
+    
+}
+.side-bar ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    position: relative;
+
+}
+.side-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+}
+.side-bar ul li{
+   display: flex;
+   flex-direction: column;
+   font-size: 0.9em;
+     counter-increment: section;
+     margin-left: 25px;
+     opacity: 30%;
+
+   
+}
+.side-bar ul li:nth-child(even):before{
+content: counter(section);
+  right: 100%; 
+  margin-right: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 10px;
+  width: 10px;
+  background-color: blue;
+  text-align:center;
+  color: white;
+  font-size: 110%;
+}
+.side-bar ul li:nth-child(odd):before{
+   content: counter(section);
+  right: 100%; 
+  margin-right: -20px;
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 10px;
+  width: 10px;
+  background-color: blue;
+  text-align:center;
+  color: white;
+  font-size: 90%;
+}
+
+.content{
+    flex-basis: 70%;
+    margin-left: 26px;
+    padding-right: 70px;
+    padding-left: 50px;
+   
+}
+
+.form{
+   min-height: 70vh;
+   margin-top: 30px;  
+}
+.form .form-header{
+    margin-bottom: 20px;
+    color: hsl(213, 96%, 18%);
+   
+}
+
+.form .form-header p{
+  font-size: 0.7em;
+}
+.form .form-body{
+  display: flex;
+   gap: 20px;
+   flex-direction: column;
+}
+.form .form-body label{
+  font-size: 0.8em;
+      color: hsl(213, 96%, 18%);
+      font-weight: 500;
+
+}
+.form .form-body input{
+  width: 100%;
+  border-radius: 10px;
+  min-height: 30px;
+  padding: 10px;
+  border: 0.01em solid  hsl(229, 24%, 87%);
+}
+.form .form-body input:focus{
+border-top:  0.01em solid  hsl(243, 100%, 62%);
+border-left:  0.01em solid  hsl(243, 100%, 62%);
+border-right:  0.01em solid  hsl(243, 100%, 62%);
+border-bottom:  0.01em solid hsl(213, 96%, 18%);
+outline: none;
+
+}
+.form .form-footer{
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+   flex-wrap: wrap;
+}
+.hidden {
+  display: none;
+}
+.pagination{
+  display: flex;
+  margin-top: 40px;
+  justify-content: space-around;
+  gap: 10px;
+  align-items: center;
+}
+.pagination .btn {
+  width: 100px;
+  
+  text-align: center;
+}
+
+.tab-status li {
+  display: none;
+ 
+  border: none;
+  border-radius: 50%;
+  
+}
+.tab-status li.active {
+  opacity: 100%;
+
+}
+/* .btn:focus-within,
+.form-input:focus-within {
+  box-shadow: #f8fafc 0px 0px 0px 2px, #c7d2fe 0px 0px 0px 6px, #0000 0px 1px 2px 0px;
+} */
+.btn {
+  border: 0;
+  background:hsl(213, 96%, 18%) ;
+  padding: 0.1rem;
+  border-radius: 10px; 
+  color:#fff;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.btn[disabled] {
+  opacity: .5;
+  pointer-events: none;
+}
+
+.btn-submit {
+  background-color: blue;
+}
+.options{
+  display: flex;
+ height: 150px;
+ width: 350px;
+  gap: 10px;
+}
+ .plan-card{
+  width: 100%;
+  height: 100%;
+  border: 1px solid hsl(213, 96%, 18%) ;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+  
+
+}
+.options .plan-card h5{
+  color: hsl(213, 96%, 18%) ;
+}
+.options .plan-card p{
+  font-size: 0.7em;
+  opacity: 50%;
+}
+.options .plan-card .plan{
+  padding-top: 40px;
+}
+.options .plan-card:nth-child(1){
+  background:hsl(231, 100%, 99%)
+}
+
+.options .plan-card:nth-child(3){
+ border-color:hsl(229, 24%, 87%);
+
+}
+.select-plan{
+  background:hsl(231, 100%, 99%) ;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  
+}
+.select-plan p{
+  font-size: 0.7em;
+}
+
+.select-plan .selected{
+  font-weight: 700;
+}
+.toggle-bg{
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 20px;
+}
+.toggle-bg input{
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider{
+  position: absolute;
+  cursor: pointer;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.slider::before{
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 16px;
+  left: 3px;
+  bottom: 4px;
+  background-color: #fff;
+  transition: .4s;
+}
+input:checked + .slider{
+  background-color: #2196f3;
+}
+input:focus + .slider{
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider::before{
+ transform: translateX(26px);
+ transform: translateX(26px);
+}
+.slider.round{
+  border-radius: 34px;
+}
+.slider.round::before{
+  border-radius: 50%;
+}
+.addon-options {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+
+}
+.addon-options .plan-card{
+  display: inline-flex;
+  width: 120%;
+   font-size: 0.8em;
+   gap: 20px;
+   align-items: center;
+}
+
+.addon-options .plan-card .addon{
+  margin-right: auto;
+}
+.addon-options .plan-card .addon h5{
+ color: hsl(213, 96%, 18%);
+ font-weight: 700;
+ font-size: 0.9em;
+ 
+}
+.addon-options .plan-card .addon p{
+  font-size: 0.7em;
+  color: hsl(231, 11%, 63%);
+  
+}
+.addon-options .plan-card p{
+  color: hsl(243, 100%, 62%);
+  font-weight: 500;
+}
+.addon-options .plan-card input{
+  width: 15px;
+  height: 15px;
+}
+.addon-options .plan-card:nth-child(1){
+  background:hsl(231, 100%, 99%)
+}
+.addon-options .plan-card:nth-child(2){
+  background:hsl(231, 100%, 99%)
+}
+.addon-options .plan-card:nth-child(3){
+border-color:hsl(229, 24%, 87%);
+}
+.finish-options .plan-card{
+  width: 120%;
+   font-size: 0.8em;
+   align-items: center;
+   background:hsl(231, 100%, 99%);
+   border: none;
+   
+}
+.finish-options .plan-card .addon{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.finish-options .plan-card .addon:nth-child(1){
+ margin-bottom: 20px;
+   color: hsl(213, 96%, 18%);
+   font-size: 1.2em;
+
+}
+
+hr{
+ margin-bottom: 10px;
+ opacity: 30%;
+
+}
+.finish-options .total{
+  display: inline-flex;
+  font-size: 0.8em;
+     width: 130%;
+     margin-top: 20px;
+     margin-left: 10px;
+     padding-right: 70px;
+     justify-content: space-between;
+
+}
+.finish-options .total h5{
+  opacity: 50%;
+}
+.finish-options .total p{
+    color: hsl(243, 100%, 62%);
+    font-weight: 700;
+
+}
+.pagination #prev{
+  font-size: 0.8em;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* mobile devices */
+@media only screen and (max-width:375px) {
+  .content{
+    flex-basis: 100%;
+    margin-left: 12px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 200px;
+}
+.form .form-body input{
+  width: 105%;
+  border-radius: 10px;
+  min-height: 15px;
+  padding: 5px;
+  border: 0.01em solid  hsl(229, 24%, 87%);
+}
+.form .form-body .options{
+  flex-direction: column;
+  margin-bottom: 50px;
+  
+}
+.form .form-body .options .plan-card{
+  width: 55%;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  
+}
+  
+  .container{
+  
+     display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 100px;
+    background: hsl(0, 0%, 100%) ;
+    padding:  2px 10px;
+    border-radius: 10px;
+    flex-direction: column;
+    
+}
+.side-bar{
+    background: url(images/bg-sidebar-mobile.svg);
+    min-width: 70vh;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+
+    
+}
+
+
+  .side-bar{
+    display: none;
+  }
+  .addon-options .plan-card{
+  display: inline-flex;
+  width: 105%;
+   font-size: 0.8em;
+   gap: 20px;
+   align-items: center;
+}
+.finish-options .plan-card{
+  width: 100%;
+   font-size: 0.8em;
+   align-items: center;
+   background:hsl(231, 100%, 99%);
+   border: none;
+   
+}
+
+}
